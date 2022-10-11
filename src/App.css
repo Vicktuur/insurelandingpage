@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.page {
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: hsl(270, 9%, 17%);
+}
+.nav {
+  display: none;
+}
+.navigation {
+  position: fixed;
+  left: -100%;
+  top: 9%;
+  gap: 70px;
+  display: grid;
+  background-color: hsl(270, 9%, 17%);
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  transition: 0.3s;
+  padding: 50px 0;
+  font-weight: 700;
+}
+.navigation.active {
+  left: 0;
+}
+.navigation a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0 10px 0;
+}
+.nav-link {
+  width: 50%;
+  margin: auto;
+}
+.nav-link:nth-child(4) {
+  border: 1px solid white !important;
+}
+.navigation a:hover  {
+  border: 1px solid white !important;
+  background-color: hsl(270, 9%, 17%) !important;
+}
+#view {
+  border: 2px solid hsl(270, 9%, 17%);
+  padding: 10px;
+}
+#view:hover {
+  background-color: black;
+  color: white;
+}
+.intro-image {
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+}
+.plan {
+  background: hsl(256, 26%, 20%);
+  text-align: center;
+  padding: 100px 20px;
+  color: white;
+  margin-top: -5px;
+  background-image: url(images/bgpatternintroleftmobile.svg);
+  background-repeat: no-repeat;
+}
+.plan #hr {
+  display: none;
+}
+.plan #h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.5rem;
+  line-height: 1.2em;
+}
+.plan #p{
+  line-height: 1.5rem;
+  margin: 30px 0;
+  color: hsl(0, 0%, 98%);
+}
+.plan a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  color: hsl(0, 0%, 98%);
+}
+.plan a:hover {
+  background-color: white;
+  color: black;
+}
+.plan .bgintropattern {
+  position: absolute;
+  top: 125%;
+  right: 0%;
+}
+.desktop-image {
+  display: none;
+}
+.bgrightpatterndesktop {
+  display: none;
+}
+.bgleftpatterndesktop {
+  display: none;
+}
+.about {
+  font-family: 'DM Serif Display', serif;
+  padding-top: 130px;
+}
+.about hr {
+  width: 40%;
+  margin: auto;
+  margin-bottom: 25px;
+}
+.about #head{
+  font-size: 2.5rem;
+  text-align: center;
+}
+.find {
+  font-family: 'DM Serif Display', serif;
+  text-align: center;
+  background: hsl(256, 26%, 20%);
+  width: 90%;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  padding: 70px 0px;
+  background-image: url(images/bgpatternhowweworkmobile.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+}
+.find #how {
+  font-size: 2.3rem;
+  width: 300px;
+  margin: auto;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+}
+.find a {
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px 20px;
+  color: hsl(0, 0%, 98%);
+}
+.find a:hover {
+  background-color: white;
+  color: black;
+}
+.insure {
+  text-align: center;
+  padding: 80px 20px 20px 20px;
+  background-image: url(images/bgpatternfootermobile.svg);
+  background-repeat: no-repeat;
+}
+.insure img {
+  margin-bottom: 30px;
+}
+.social {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 20px;
+}
+.social a img:hover {
+  background-color: black;
+}
+
+@media (min-width: 800px){
+  .navigation {
+    display: none;
+  }
+  .nav {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    font-weight: bold;
+  }
+  .nav a{
+    text-decoration: none;
+    color: hsl(273, 4%, 51%);
+    transition: all 0.7s ease;
+  }
+  .nav a:hover {
+    color: black;
+  }
+  #hamburger{
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 130px;
+  }
+  .intro-image {
+    display: none;
+  }
+  .plan {
+    background: hsl(256, 26%, 20%);
+    text-align: left;
+    padding: 143px 0px;
+    color: white;
+    margin-top: -5px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .plan #hr {
+    display: block;
+    color: white;
+    width: 25%;
+    margin-left: 0;
+    position: relative;
+    top: -12%;
+  }
+  .desktop-image {
+    display: block;
+    position: absolute;
+    top: 30%;
+    width: 45%;
+    height: auto;
+  }
+  .intro-text {
+    width: 80%;
+    margin-left: auto;
+    margin-top: 12%;
+  }
+  .plan #h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 4.2rem;
+    line-height: 1.0em;
+    width:90%;
+  }
+  .plan #p{
+    line-height: 1.5rem;
+    margin: 30px 0;
+    color: hsl(0, 0%, 98%);
+    width: 95%;
+  }
+  .plan a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    color: hsl(0, 0%, 98%);
+  }
+  .plan .bgintropattern {
+    display: none;
+  }
+  .bgrightpatterndesktop {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .bgleftpatterndesktop {
+    display: block;
+    position: absolute;
+    top: 30em;
+    left: 0;
+  }
+  .about {
+    margin-top: 14em;
+  }
+  .about hr {
+    width: 12%;
+    margin-left: auto;
+    margin-bottom: 55px;
+    margin-left: 120px;
+    color: hsl(0, 0%, 98%);
+  }
+  .about #head{
+    font-size: 4.5rem;
+    text-align: left;
+    margin-left: 110px;
+    margin-bottom: 20px;
+  }
+  .ad {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .find {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: none;
+    width: 80.5%;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding: 60px 0px;
+    background-image: url(images/bgpatternhowweworkdesktop.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+  }
+  .find #how {
+    font-size: 3.9rem;
+    width: 550px;
+    margin: auto;
+    line-height: 3.5rem;
+    text-align: left;
+    margin-bottom: 0px;
+  }
+  .footer {
+    background: hsl(0, 0%, 98%);
+    background-image: url(images/bgpatternfooterdesktop.svg);
+    background-repeat: no-repeat;
+  }
+  .insure {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 70px 130px 0px 130px;
+    background-image: url(images/bgpatternfooterdesktop.svg);
+    background-repeat: no-repeat;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+}
