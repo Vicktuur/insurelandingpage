@@ -1,4 +1,5 @@
 import './App.css';
+import Menu from './components/Menu'
 import About from './components/About'
 import Help from './components/Help'
 import Contact from './components/Contact'
