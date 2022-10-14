@@ -17,37 +17,13 @@ import bgpatternintrorightdesktop from './images/bgpatternintrorightdesktop.svg'
 import bgpatternintroleftdesktop from './images/bgpatternintroleftdesktop.svg'
 import bgpatternmobilenav from './images/bgpatternmobilenav.svg'
 
-const hamburger = document.querySelector('.hamburger')
-const navigation = document.querySelector('.navigation')
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active")
-  navigation.classList.toggle("active")
-})
-
-document.querySelectorAll(".nav-link").forEach(
-  a => a.addEventListener("click", () => {
-    hamburger.classList.remove("active")
-    navigation.classList.remove("active")
-  })
-)
-
 function App() {
   return (
     <div className='page'>
       <div className='heading'>
         <img src={logo} alt="logo"/>
-        <div className='hamburger'>
-          <span className='bar'></span>
-          <span className='bar'></span>
-          <span className='bar'></span>
-        </div>
-        <div className='navigation'>
-          <a href='#' className='nav-link'>HOW WE WORK</a>
-          <a href='#' className='nav-link'>BLOG</a>
-          <a href='#' className='nav-link'>ACCOUNT</a>
-          <a href='#' className='nav-link' id='view'>VIEW PLANS</a>
-          <img src={bgpatternmobilenav} alt='' style={{width: '100%'}}/>
+          <div>
+          <Menu />
         </div>
         <div className='nav'>
           <a href='#'>HOW WE WORK</a>
