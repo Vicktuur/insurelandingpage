@@ -205,7 +205,7 @@
   background-color: black;
 }
 
-@media (min-width: 800px){
+@media (min-width: 768px){
   .navigation {
     display: none;
   }
